@@ -122,6 +122,19 @@ const talks = [
   },
 ];
 
+const courses = [
+  {
+    title: "MATH 4030 · Differential Geometry",
+    term: "Fall 2026",
+    institution: "CUHK",
+  },
+  {
+    title: "MATH 250 · Linear Algebra",
+    term: "Summer 2022",
+    institution: "Rutgers University",
+  },
+];
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -217,7 +230,7 @@ export default function Home() {
             <div className="hero__copy">
               <p className="eyebrow hero__eyebrow">Postdoctoral Fellow · Mathematics</p>
               <h1 id="hero-title">
-                Liuwei Gong
+                <span className="name-latin">Liuwei Gong</span>
                 <span className="name-chinese" lang="zh-Hans">
                   巩刘伟
                 </span>
@@ -341,16 +354,24 @@ export default function Home() {
         </section>
 
         <section className="section teaching" id="teaching" aria-labelledby="teaching-title">
-          <div className="shell teaching__grid">
+          <div className="shell">
             <SectionHeading id="teaching-title" eyebrow="In the classroom" title="Teaching" />
-            <article className="course-card">
-              <p className="course-card__institution">Rutgers University</p>
-              <h3>Math 250 · Linear Algebra</h3>
-              <p>Summer 2022</p>
-              <div className="course-card__mark" aria-hidden="true">
-                A<sup>n</sup>
-              </div>
-            </article>
+            <div className="teaching-list">
+              {courses.map((course, index) => (
+                <article className="course" key={course.title}>
+                  <div className="course__index" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <h3>{course.title}</h3>
+                  <ul>
+                    <li>
+                      <time>{course.term}</time>
+                      <span>{course.institution}</span>
+                    </li>
+                  </ul>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

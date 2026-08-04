@@ -13,7 +13,10 @@ test("exports a complete academic homepage", async () => {
   assert.match(html, /Articles &amp; preprints/i);
   assert.match(html, /The \(local\) geometry of oscillatory integrals/);
   assert.match(html, /Invited talks/);
-  assert.match(html, /Math 250/);
+  assert.match(html, /MATH 250/i);
+  assert.match(html, /MATH 4030/);
+  assert.match(html, /Differential Geometry/);
+  assert.match(html, /Fall 2026/);
   assert.match(html, /mailto:lwgong@math\.cuhk\.edu\.hk/);
   assert.match(html, /scholar\.google\.com\/citations\?user=tzpMVewAAAAJ&amp;hl=en/);
   assert.doesNotMatch(html, /<figcaption|Research areas|Nonlinear · Harmonic · Geometric/i);
@@ -37,8 +40,12 @@ test("keeps the site source free of starter preview artifacts", async () => {
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
 
-  assert.doesNotMatch(page, /_sites-preview|SkeletonPreview|hero__pattern/);
+  assert.match(page, /className="name-latin">Liuwei Gong<\/span>/);
+  assert.doesNotMatch(page, /_sites-preview|SkeletonPreview|hero__pattern|course-card/);
   assert.doesNotMatch(layout, /codex-preview|Starter Project/);
   assert.doesNotMatch(styles, /portrait-card::before|rotate\(/);
+  assert.doesNotMatch(styles, /\.publication:hover|Songti SC|SimSun|--rust/);
+  const fontFamilies = [...styles.matchAll(/font-family:\s*([^;]+);/g)].map((match) => match[1].trim());
+  assert.deepEqual(new Set(fontFamilies), new Set(["var(--sans)", "var(--serif)"]));
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });
