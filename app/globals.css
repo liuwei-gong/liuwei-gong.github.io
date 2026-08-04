@@ -24,6 +24,7 @@ html {
 
 body {
   margin: 0;
+  zoom: 0.8;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
@@ -797,6 +798,7 @@ img {
   }
 
   body {
+    zoom: 1;
     background: #fff;
   }
 
