@@ -16,6 +16,8 @@ test("exports a complete academic homepage", async () => {
   assert.match(html, /Math 250/);
   assert.match(html, /mailto:lwgong@math\.cuhk\.edu\.hk/);
   assert.match(html, /scholar\.google\.com\/citations\?user=tzpMVewAAAAJ&amp;hl=en/);
+  assert.doesNotMatch(html, /<figcaption|Research areas|Nonlinear · Harmonic · Geometric/i);
+  assert.equal((html.match(/id="about"/g) ?? []).length, 1);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 

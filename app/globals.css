@@ -224,10 +224,18 @@ img {
   line-height: 1.5;
 }
 
-.hero__position {
+.hero__position,
+.hero__bio {
   max-width: 650px;
-  margin: 0;
   color: var(--ink-soft);
+}
+
+.hero__position {
+  margin: 0;
+}
+
+.hero__bio {
+  margin: 14px 0 0;
 }
 
 .hero__actions {
@@ -329,34 +337,10 @@ img {
 
 .portrait-card__frame img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
-  object-position: 50% 40%;
+  object-position: 50% 30%;
   filter: saturate(0.82) contrast(1.03);
-}
-
-.portrait-card figcaption {
-  position: absolute;
-  right: -18px;
-  bottom: 32px;
-  display: grid;
-  max-width: 270px;
-  gap: 3px;
-  padding: 16px 20px;
-  background: var(--teal-deep);
-  color: var(--white);
-  box-shadow: 0 14px 35px rgba(16, 69, 68, 0.25);
-  font-family: var(--serif);
-  font-size: 1rem;
-}
-
-.portrait-card figcaption span {
-  color: #b9d5cf;
-  font-family: var(--sans);
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
 }
 
 .section {
@@ -386,56 +370,19 @@ img {
   font-size: 1.02rem;
 }
 
-.about {
-  border-top: 1px solid var(--line);
-  background: var(--white);
-}
-
-.about__grid,
 .teaching__grid {
   display: grid;
   grid-template-columns: minmax(270px, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(52px, 9vw, 130px);
 }
 
-.about .section-heading,
 .teaching .section-heading {
   margin-bottom: 0;
 }
 
-.about__content {
-  max-width: 720px;
-  padding-top: 34px;
-}
-
-.about__content > p {
-  color: var(--ink-soft);
-}
-
-.about__lead {
-  margin-top: 0;
-  color: var(--ink) !important;
-  font-family: var(--serif);
-  font-size: clamp(1.45rem, 2.6vw, 2.05rem);
-  line-height: 1.42;
-}
-
-.text-link {
-  color: var(--teal);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.profile-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 28px;
-}
-
 .publications {
-  background: var(--paper);
+  border-top: 1px solid var(--line);
+  background: var(--white);
 }
 
 .publication-list {
@@ -723,7 +670,6 @@ img {
     border-left: 0;
   }
 
-  .about__grid,
   .teaching__grid {
     grid-template-columns: 1fr;
     gap: 38px;
@@ -789,10 +735,6 @@ img {
     justify-self: center;
   }
 
-  .portrait-card figcaption {
-    right: -5%;
-  }
-
   .talk-list {
     grid-template-columns: 1fr;
   }
@@ -843,14 +785,6 @@ img {
 
   .button {
     width: 100%;
-  }
-
-  .portrait-card figcaption {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    max-width: none;
-    margin: -8px 14px 0;
   }
 
   .publication {

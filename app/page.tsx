@@ -196,7 +196,7 @@ export default function Home() {
 
       <header className="site-header">
         <div className="site-header__inner shell">
-          <a className="wordmark" href="#top" aria-label="Liuwei Gong, home">
+          <a className="wordmark" href="#about" aria-label="Liuwei Gong, home">
             Liuwei Gong
           </a>
           <nav className="site-nav" aria-label="Primary navigation">
@@ -212,7 +212,7 @@ export default function Home() {
       </header>
 
       <main id="main-content">
-        <section className="hero" id="top" aria-labelledby="hero-title">
+        <section className="hero" id="about" aria-labelledby="hero-title">
           <div className="hero__pattern" aria-hidden="true" />
           <div className="hero__grid shell">
             <div className="hero__copy">
@@ -224,13 +224,20 @@ export default function Home() {
                 </span>
               </h1>
               <p className="hero__lede">
-                I work at the intersection of nonlinear, harmonic, and geometric analysis, with a focus on
-                geometric variational problems and oscillatory integrals.
+                My research connects analytic methods with geometric structure, from conformally invariant
+                curvature equations to oscillatory integral operators on manifolds.
               </p>
               <p className="hero__position">
                 Currently a postdoctoral fellow at the{" "}
-                <OutboundLink href="https://www.math.cuhk.edu.hk/">Chinese University of Hong Kong</OutboundLink>,
-                working with <OutboundLink href="https://personal.math.ubc.ca/~jcwei/">Juncheng Wei</OutboundLink>.
+                <OutboundLink href="https://www.math.cuhk.edu.hk/people/academic-staff/liuwei">
+                  Chinese University of Hong Kong
+                </OutboundLink>, working with{" "}
+                <OutboundLink href="https://personal.math.ubc.ca/~jcwei/">Juncheng Wei</OutboundLink>.
+              </p>
+              <p className="hero__bio">
+                I received my PhD from Rutgers University under the supervision of{" "}
+                <OutboundLink href="https://sites.math.rutgers.edu/~yyli/">Yanyan Li</OutboundLink>. My work spans
+                nonlinear, harmonic, and geometric analysis.
               </p>
               <div className="hero__actions">
                 <a className="button button--primary" href="#publications">
@@ -260,7 +267,7 @@ export default function Home() {
               </dl>
             </div>
 
-            <figure className="portrait-card">
+            <div className="portrait-card">
               <div className="portrait-card__frame">
                 <img
                   src="/liuwei-gong.jpg"
@@ -268,42 +275,6 @@ export default function Home() {
                   width="1280"
                   height="1155"
                 />
-              </div>
-              <figcaption>
-                <span>Research areas</span>
-                Nonlinear · Harmonic · Geometric
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section className="section about" id="about" aria-labelledby="about-title">
-          <div className="shell about__grid">
-            <SectionHeading id="about-title" eyebrow="Profile" title="About" />
-            <div className="about__content">
-              <p className="about__lead">
-                My research connects analytic methods with geometric structure, from conformally invariant
-                curvature equations to oscillatory integral operators on manifolds.
-              </p>
-              <p>
-                I received my PhD from Rutgers University under the supervision of{" "}
-                <OutboundLink href="https://sites.math.rutgers.edu/~yyli/">Yanyan Li</OutboundLink>. My current
-                work at CUHK develops questions across nonlinear analysis, harmonic analysis, and geometric
-                analysis.
-              </p>
-              <div className="profile-links">
-                <OutboundLink
-                  className="text-link"
-                  href="https://scholar.google.com/citations?user=tzpMVewAAAAJ&hl=en"
-                >
-                  Google Scholar <span aria-hidden="true">↗</span>
-                </OutboundLink>
-                <OutboundLink
-                  className="text-link"
-                  href="https://www.math.cuhk.edu.hk/people/academic-staff/liuwei"
-                >
-                  CUHK profile <span aria-hidden="true">↗</span>
-                </OutboundLink>
               </div>
             </div>
           </div>
@@ -401,7 +372,7 @@ export default function Home() {
         <div className="shell site-footer__inner">
           <p>© 2026 Liuwei Gong</p>
           <p>Postdoctoral Fellow · The Chinese University of Hong Kong</p>
-          <a href="#top">Back to top ↑</a>
+          <a href="#about">Back to top ↑</a>
         </div>
       </footer>
     </>
