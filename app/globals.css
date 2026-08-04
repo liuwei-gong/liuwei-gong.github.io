@@ -102,10 +102,6 @@ img {
   text-decoration: none;
 }
 
-.wordmark__dot {
-  color: var(--rust);
-}
-
 .site-nav {
   display: flex;
   align-items: center;

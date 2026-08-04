@@ -170,13 +170,13 @@ function SectionHeading({
   intro,
 }: {
   id: string;
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   intro?: string;
 }) {
   return (
     <div className="section-heading">
-      <p className="eyebrow">{eyebrow}</p>
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
       <h2 id={id}>{title}</h2>
       {intro ? <p className="section-intro">{intro}</p> : null}
     </div>
@@ -197,7 +197,7 @@ export default function Home() {
       <header className="site-header">
         <div className="site-header__inner shell">
           <a className="wordmark" href="#top" aria-label="Liuwei Gong, home">
-            LG<span className="wordmark__dot">.</span>
+            Liuwei Gong
           </a>
           <nav className="site-nav" aria-label="Primary navigation">
             <a href="#about">About</a>
@@ -313,7 +313,6 @@ export default function Home() {
           <div className="shell">
             <SectionHeading
               id="publications-title"
-              eyebrow="Selected work"
               title="Articles & preprints"
               intro="Research in geometric analysis, conformal geometry, and oscillatory integral theory."
             />
