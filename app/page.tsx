@@ -163,11 +163,21 @@ function Collaborators({ people }: { people: Person[] }) {
   );
 }
 
-function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) {
+function SectionHeading({
+  id,
+  eyebrow,
+  title,
+  intro,
+}: {
+  id: string;
+  eyebrow: string;
+  title: string;
+  intro?: string;
+}) {
   return (
     <div className="section-heading">
       <p className="eyebrow">{eyebrow}</p>
-      <h2>{title}</h2>
+      <h2 id={id}>{title}</h2>
       {intro ? <p className="section-intro">{intro}</p> : null}
     </div>
   );
@@ -269,7 +279,7 @@ export default function Home() {
 
         <section className="section about" id="about" aria-labelledby="about-title">
           <div className="shell about__grid">
-            <SectionHeading eyebrow="Profile" title="Analysis shaped by geometry" />
+            <SectionHeading id="about-title" eyebrow="Profile" title="Analysis shaped by geometry" />
             <div className="about__content">
               <p className="about__lead">
                 My research connects analytic methods with geometric structure, from conformally invariant
@@ -316,6 +326,7 @@ export default function Home() {
         <section className="section publications" id="publications" aria-labelledby="publications-title">
           <div className="shell">
             <SectionHeading
+              id="publications-title"
               eyebrow="Selected work"
               title="Articles & preprints"
               intro="Research in geometric analysis, conformal geometry, and oscillatory integral theory."
@@ -352,7 +363,7 @@ export default function Home() {
 
         <section className="section talks" id="talks" aria-labelledby="talks-title">
           <div className="shell">
-            <SectionHeading eyebrow="Academic exchange" title="Invited talks" />
+            <SectionHeading id="talks-title" eyebrow="Academic exchange" title="Invited talks" />
             <div className="talk-list">
               {talks.map((talk, index) => (
                 <article className="talk" key={talk.title}>
@@ -376,7 +387,7 @@ export default function Home() {
 
         <section className="section teaching" id="teaching" aria-labelledby="teaching-title">
           <div className="shell teaching__grid">
-            <SectionHeading eyebrow="In the classroom" title="Teaching" />
+            <SectionHeading id="teaching-title" eyebrow="In the classroom" title="Teaching" />
             <article className="course-card">
               <p className="course-card__institution">Rutgers University</p>
               <h3>Math 250 · Linear Algebra</h3>
