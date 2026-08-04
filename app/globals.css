@@ -24,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  zoom: 0.8;
+  zoom: 0.9;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
