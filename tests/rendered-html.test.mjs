@@ -30,13 +30,15 @@ test("ships the portrait and CV with the static export", async () => {
 });
 
 test("keeps the site source free of starter preview artifacts", async () => {
-  const [page, layout, packageJson] = await Promise.all([
+  const [page, layout, styles, packageJson] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
 
-  assert.doesNotMatch(page, /_sites-preview|SkeletonPreview/);
+  assert.doesNotMatch(page, /_sites-preview|SkeletonPreview|hero__pattern/);
   assert.doesNotMatch(layout, /codex-preview|Starter Project/);
+  assert.doesNotMatch(styles, /portrait-card::before|rotate\(/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });

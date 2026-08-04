@@ -213,7 +213,6 @@ export default function Home() {
 
       <main id="main-content">
         <section className="hero" id="about" aria-labelledby="hero-title">
-          <div className="hero__pattern" aria-hidden="true" />
           <div className="hero__grid shell">
             <div className="hero__copy">
               <p className="eyebrow hero__eyebrow">Postdoctoral Fellow · Mathematics</p>
