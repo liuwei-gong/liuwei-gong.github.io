@@ -291,20 +291,6 @@ export default function Home() {
                 work at CUHK develops questions across nonlinear analysis, harmonic analysis, and geometric
                 analysis.
               </p>
-              <div className="research-areas" aria-label="Research interests">
-                <div>
-                  <span>01</span>
-                  <h3>Nonlinear analysis</h3>
-                </div>
-                <div>
-                  <span>02</span>
-                  <h3>Harmonic analysis</h3>
-                </div>
-                <div>
-                  <span>03</span>
-                  <h3>Geometric analysis</h3>
-                </div>
-              </div>
               <div className="profile-links">
                 <OutboundLink
                   className="text-link"

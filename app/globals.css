@@ -213,7 +213,7 @@ img {
 .name-chinese {
   display: block;
   margin-top: 24px;
-  color: var(--rust);
+  color: var(--ink);
   font-family: "Songti SC", SimSun, serif;
   font-size: clamp(1.7rem, 3vw, 2.8rem);
   letter-spacing: 0.18em;
@@ -333,9 +333,9 @@ img {
 
 .portrait-card__frame img {
   width: 100%;
-  aspect-ratio: 0.86;
+  aspect-ratio: 1;
   object-fit: cover;
-  object-position: 50% 42%;
+  object-position: 50% 40%;
   filter: saturate(0.82) contrast(1.03);
 }
 
@@ -422,38 +422,6 @@ img {
   font-family: var(--serif);
   font-size: clamp(1.45rem, 2.6vw, 2.05rem);
   line-height: 1.42;
-}
-
-.research-areas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 52px 0 36px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.research-areas > div {
-  min-height: 145px;
-  padding: 22px 18px 22px 0;
-}
-
-.research-areas > div + div {
-  padding-left: 18px;
-  border-left: 1px solid var(--line);
-}
-
-.research-areas span {
-  color: var(--rust);
-  font-family: var(--serif);
-  font-size: 0.8rem;
-}
-
-.research-areas h3 {
-  margin: 30px 0 0;
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 400;
-  line-height: 1.25;
 }
 
 .text-link {
@@ -827,28 +795,6 @@ img {
 
   .portrait-card figcaption {
     right: -5%;
-  }
-
-  .research-areas {
-    grid-template-columns: 1fr;
-  }
-
-  .research-areas > div {
-    display: grid;
-    min-height: auto;
-    grid-template-columns: 48px 1fr;
-    align-items: center;
-    padding: 18px 0;
-  }
-
-  .research-areas > div + div {
-    padding-left: 0;
-    border-top: 1px solid var(--line);
-    border-left: 0;
-  }
-
-  .research-areas h3 {
-    margin: 0;
   }
 
   .talk-list {
