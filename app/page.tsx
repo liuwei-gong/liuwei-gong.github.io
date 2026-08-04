@@ -279,7 +279,7 @@ export default function Home() {
 
         <section className="section about" id="about" aria-labelledby="about-title">
           <div className="shell about__grid">
-            <SectionHeading id="about-title" eyebrow="Profile" title="Analysis shaped by geometry" />
+            <SectionHeading id="about-title" eyebrow="Profile" title="About" />
             <div className="about__content">
               <p className="about__lead">
                 My research connects analytic methods with geometric structure, from conformally invariant
