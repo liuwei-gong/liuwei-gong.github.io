@@ -96,7 +96,10 @@ const publications: Publication[] = [
 const talks = [
   {
     title: "Global convergence of the Gursky–Malchiodi Q-curvature flow",
-    appearances: [{ date: "May 2026", venue: "Nanjing University" }],
+    appearances: [
+      { date: "July 2026", venue: "Yunnan Normal University" },
+      { date: "May 2026", venue: "Nanjing University" },
+    ],
   },
   {
     title: "Oscillatory integral operators on manifolds",
@@ -375,17 +378,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="contact" aria-labelledby="contact-title">
-          <div className="shell contact__inner">
-            <div>
-              <p className="eyebrow">Contact</p>
-              <h2 id="contact-title">Let’s talk mathematics.</h2>
-            </div>
-            <a className="contact__email" href="mailto:lwgong@math.cuhk.edu.hk">
-              lwgong@math.cuhk.edu.hk
-            </a>
-          </div>
-        </section>
       </main>
 
       <footer className="site-footer">
