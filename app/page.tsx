@@ -219,7 +219,7 @@ export default function Home() {
             <a href="#teaching">Teaching</a>
           </nav>
           <a className="header-cv" href="/liuwei-gong-cv.pdf" target="_blank" rel="noreferrer">
-            CV <span aria-hidden="true">↗</span>
+            CV
           </a>
         </div>
       </header>
@@ -256,13 +256,13 @@ export default function Home() {
                   View publications
                 </a>
                 <a className="button button--secondary" href="/liuwei-gong-cv.pdf" target="_blank" rel="noreferrer">
-                  Curriculum vitae <span aria-hidden="true">↗</span>
+                  Curriculum vitae
                 </a>
                 <OutboundLink
                   className="button button--secondary"
                   href="https://scholar.google.com/citations?user=tzpMVewAAAAJ&hl=en"
                 >
-                  Google Scholar <span aria-hidden="true">↗</span>
+                  Google Scholar
                 </OutboundLink>
               </div>
               <dl className="contact-strip">
@@ -319,7 +319,7 @@ export default function Home() {
                   <div className="publication__links" aria-label={`Links for ${publication.title}`}>
                     {publication.links.map((link) => (
                       <OutboundLink key={link.label} href={link.href}>
-                        {link.label} <span aria-hidden="true">↗</span>
+                        {link.label}
                       </OutboundLink>
                     ))}
                   </div>
@@ -382,7 +382,7 @@ export default function Home() {
               <h2 id="contact-title">Let’s talk mathematics.</h2>
             </div>
             <a className="contact__email" href="mailto:lwgong@math.cuhk.edu.hk">
-              lwgong@math.cuhk.edu.hk <span aria-hidden="true">↗</span>
+              lwgong@math.cuhk.edu.hk
             </a>
           </div>
         </section>
@@ -392,7 +392,7 @@ export default function Home() {
         <div className="shell site-footer__inner">
           <p>© 2026 Liuwei Gong</p>
           <p>Postdoctoral Fellow · The Chinese University of Hong Kong</p>
-          <a href="#about">Back to top ↑</a>
+          <a href="#about">Back to top</a>
         </div>
       </footer>
     </>
