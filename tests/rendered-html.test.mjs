@@ -14,9 +14,7 @@ test("exports a complete academic homepage", async () => {
   assert.match(html, /The \(local\) geometry of oscillatory integrals/);
   assert.match(html, /Invited talks/);
   assert.match(html, /MATH 250/i);
-  assert.match(html, /MATH 4030/);
-  assert.match(html, /Differential Geometry/);
-  assert.match(html, /Fall 2026/);
+  assert.doesNotMatch(html, /MATH 4030|Differential Geometry|Fall 2026/);
   assert.match(html, /mailto:lwgong@math\.cuhk\.edu\.hk/);
   assert.match(html, /scholar\.google\.com\/citations\?user=tzpMVewAAAAJ&amp;hl=en/);
   assert.doesNotMatch(html, /<figcaption|Research areas|Nonlinear · Harmonic · Geometric/i);

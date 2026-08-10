@@ -127,11 +127,6 @@ const talks = [
 
 const courses = [
   {
-    title: "MATH 4030 · Differential Geometry",
-    term: "Fall 2026",
-    institution: "CUHK",
-  },
-  {
     title: "MATH 250 · Linear Algebra",
     term: "Summer 2022",
     institution: "Rutgers University",
