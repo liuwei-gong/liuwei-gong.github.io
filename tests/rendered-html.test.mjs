@@ -11,10 +11,15 @@ test("exports a complete academic homepage", async () => {
   assert.match(html, /Liuwei Gong/);
   assert.match(html, /巩刘伟/);
   assert.match(html, /Articles &amp; preprints/i);
+  assert.match(html, /A counterexample to a strong maximum principle for the sixth-order GJMS operator/);
+  assert.match(html, /arxiv\.org\/abs\/2608\.24148/);
+  assert.match(html, /limingxiangmath\.github\.io/);
   assert.match(html, /The \(local\) geometry of oscillatory integrals/);
   assert.match(html, /Invited talks/);
   assert.match(html, /MATH 250/i);
-  assert.doesNotMatch(html, /MATH 4030|Differential Geometry|Fall 2026/);
+  assert.match(html, /MATH 4030/);
+  assert.match(html, /Differential Geometry/);
+  assert.match(html, /Fall 2026/);
   assert.match(html, /mailto:lwgong@math\.cuhk\.edu\.hk/);
   assert.match(html, /scholar\.google\.com\/citations\?user=tzpMVewAAAAJ&amp;hl=en/);
   assert.doesNotMatch(html, /<figcaption|Research areas|Nonlinear · Harmonic · Geometric/i);

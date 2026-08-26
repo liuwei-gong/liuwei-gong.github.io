@@ -22,6 +22,21 @@ type Publication = {
 
 const publications: Publication[] = [
   {
+    number: "06",
+    year: "2026",
+    kind: "Preprint",
+    title:
+      "A counterexample to a strong maximum principle for the sixth-order GJMS operator",
+    authors: [
+      {
+        name: "Mingxiang Li",
+        href: "https://limingxiangmath.github.io/",
+      },
+      { name: "Juncheng Wei", href: "https://personal.math.ubc.ca/~jcwei/" },
+    ],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2608.24148" }],
+  },
+  {
     number: "05",
     year: "2026",
     kind: "Preprint",
@@ -126,6 +141,11 @@ const talks = [
 ];
 
 const courses = [
+  {
+    title: "MATH 4030 · Differential Geometry",
+    term: "Fall 2026",
+    institution: "CUHK",
+  },
   {
     title: "MATH 250 · Linear Algebra",
     term: "Summer 2022",
