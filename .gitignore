@@ -41,3 +41,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# Independently managed Overleaf CV source
+/6a2b9c577659a2e3066b6b16/
