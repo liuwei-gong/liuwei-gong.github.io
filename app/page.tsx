@@ -22,6 +22,19 @@ type Publication = {
 
 const publications: Publication[] = [
   {
+    number: "07",
+    year: "2026",
+    kind: "Preprint",
+    title:
+      "On critical dimensions for compactness in the boundary Yamabe problem, I",
+    authors: [
+      { name: "Seunghyeok Kim", href: "https://sites.google.com/site/shkim0401/" },
+      { name: "Monica Musso", href: "https://sites.google.com/view/monicamusso/home" },
+      { name: "Juncheng Wei", href: "https://personal.math.ubc.ca/~jcwei/" },
+    ],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2609.39945" }],
+  },
+  {
     number: "06",
     year: "2026",
     kind: "Preprint",
@@ -112,6 +125,7 @@ const talks = [
   {
     title: "Global convergence of the Gursky–Malchiodi Q-curvature flow",
     appearances: [
+      { date: "8 August 2026", venue: "Institute of Mathematics, CAS" },
       { date: "July 2026", venue: "Yunnan Normal University" },
       { date: "May 2026", venue: "Nanjing University" },
     ],
@@ -151,6 +165,15 @@ const courses = [
     term: "Summer 2022",
     institution: "Rutgers University",
   },
+];
+
+const refereeJournals = [
+  "Advances in Mathematics",
+  "Calculus of Variations and Partial Differential Equations",
+  "The Journal of Geometric Analysis",
+  "Discrete and Continuous Dynamical Systems",
+  "Journal of Differential Equations",
+  "Journal of the London Mathematical Society",
 ];
 
 const structuredData = {
@@ -235,6 +258,7 @@ export default function Home() {
             <a href="#publications">Publications</a>
             <a href="#talks">Talks</a>
             <a href="#teaching">Teaching</a>
+            <a href="#service">Service</a>
           </nav>
           <a className="header-cv" href="/liuwei-gong-cv.pdf" target="_blank" rel="noreferrer">
             CV
@@ -393,6 +417,16 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section service" id="service" aria-labelledby="service-title">
+          <div className="shell">
+            <SectionHeading id="service-title" eyebrow="Professional service" title="Referee journals" />
+            <ul className="referee-list">
+              {refereeJournals.map((journal) => (
+                <li key={journal}>{journal}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
       </main>
 
       <footer className="site-footer">
