@@ -554,26 +554,6 @@ img {
   color: var(--ink-soft);
 }
 
-.service {
-  background: var(--white);
-}
-
-.referee-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  gap: 0 40px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.referee-list li {
-  padding-block: 18px;
-  border-top: 1px solid var(--line);
-  font-family: var(--serif);
-  font-size: 1.1rem;
-}
-
 .site-footer {
   padding-block: 30px;
   background: #0e1926;
