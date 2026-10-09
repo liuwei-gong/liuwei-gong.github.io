@@ -15,6 +15,7 @@ type Publication = {
   year: string;
   kind: string;
   title: string;
+  displayTitle?: ReactNode;
   authors: Person[];
   citation?: string;
   links: ExternalLink[];
@@ -25,8 +26,12 @@ const publications: Publication[] = [
     number: "08",
     year: "2026",
     kind: "Preprint",
-    title:
-      "Noncompactness for the constant $Q_{2N}$-curvature problem",
+    title: "Noncompactness for the constant Q2N-curvature problem",
+    displayTitle: (
+    <>
+    Noncompactness for the constant <i>Q</i><sub>2<i>N</i></sub>-curvature problem
+    </>
+    ),
     authors: [
       { name: "Seunghyeok Kim", href: "https://sites.google.com/site/shkim0401/" },
       { name: "Juncheng Wei", href: "https://personal.math.ubc.ca/~jcwei/" },
@@ -354,7 +359,7 @@ export default function Home() {
                       <span>{publication.year}</span>
                       <span>{publication.kind}</span>
                     </div>
-                    <h3>{publication.title}</h3>
+                    <h3>{publication.displayTitle ?? publication.title}</h3>
                     <p className="publication__authors">
                       With <Collaborators people={publication.authors} />
                     </p>
