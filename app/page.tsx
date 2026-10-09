@@ -22,6 +22,18 @@ type Publication = {
 
 const publications: Publication[] = [
   {
+    number: "08",
+    year: "2026",
+    kind: "Preprint",
+    title:
+      "Noncompactness for the constant $Q_{2N}$-curvature problem",
+    authors: [
+      { name: "Seunghyeok Kim", href: "https://sites.google.com/site/shkim0401/" },
+      { name: "Juncheng Wei", href: "https://personal.math.ubc.ca/~jcwei/" },
+    ],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2610.07992" }],
+  },
+  {
     number: "07",
     year: "2026",
     kind: "Preprint",
