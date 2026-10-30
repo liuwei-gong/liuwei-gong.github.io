@@ -23,6 +23,16 @@ type Publication = {
 
 const publications: Publication[] = [
   {
+    number: "09",
+    year: "2026",
+    kind: "Preprint",
+    title: "Sharp local scalar-curvature rigidity of spherical caps",
+    authors: [
+      { name: "Juncheng Wei", href: "https://personal.math.ubc.ca/~jcwei/" },
+    ],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2610.29579" }],
+  },
+  {
     number: "08",
     year: "2026",
     kind: "Preprint",
@@ -43,13 +53,16 @@ const publications: Publication[] = [
     year: "2026",
     kind: "Preprint",
     title:
-      "On critical dimensions for compactness in the boundary Yamabe problem, I",
+      "On critical dimensions for compactness in the boundary Yamabe problem, I & II",
     authors: [
       { name: "Seunghyeok Kim", href: "https://sites.google.com/site/shkim0401/" },
       { name: "Monica Musso", href: "https://sites.google.com/view/monicamusso/home" },
       { name: "Juncheng Wei", href: "https://personal.math.ubc.ca/~jcwei/" },
     ],
-    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2609.39945" }],
+    links: [
+      { label: "arXiv I", href: "https://arxiv.org/abs/2609.39945" },
+      { label: "arXiv II", href: "https://arxiv.org/abs/2610.10485" },
+    ],
   },
   {
     number: "06",
