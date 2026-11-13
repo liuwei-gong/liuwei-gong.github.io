@@ -36,17 +36,21 @@ const publications: Publication[] = [
     number: "08",
     year: "2026",
     kind: "Preprint",
-    title: "Noncompactness for the constant Q2N-curvature problem",
+    title:
+      "An ambient metric framework for sharp compactness of the constant Q2N-curvature problem, I & II",
     displayTitle: (
-    <>
-    Noncompactness for the constant <i>Q</i><sub>2<i>N</i></sub>-curvature problem
-    </>
+      <>
+        An ambient metric framework for sharp compactness of the constant <i>Q</i><sub>2<i>N</i></sub>-curvature problem, I &amp; II
+      </>
     ),
     authors: [
       { name: "Seunghyeok Kim", href: "https://sites.google.com/site/shkim0401/" },
       { name: "Juncheng Wei", href: "https://personal.math.ubc.ca/~jcwei/" },
     ],
-    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2610.07992" }],
+    links: [
+      { label: "arXiv I", href: "https://arxiv.org/abs/2610.07992" },
+      { label: "arXiv II", href: "https://arxiv.org/abs/2611.06551" },
+    ],
   },
   {
     number: "07",
@@ -152,6 +156,12 @@ const publications: Publication[] = [
 ];
 
 const talks = [
+  {
+    title: "Sharp local scalar-curvature rigidity of spherical caps",
+    appearances: [
+      { date: "Nov. 2026", venue: "The Hong Kong Polytechnic University" },
+    ],
+  },
   {
     title: "Global convergence of the Gursky–Malchiodi Q-curvature flow",
     appearances: [
