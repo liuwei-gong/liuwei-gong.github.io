@@ -7,7 +7,7 @@ type ExternalLink = {
 
 type Person = {
   name: string;
-  href: string;
+  href?: string;
 };
 
 type Publication = {
@@ -22,6 +22,18 @@ type Publication = {
 };
 
 const publications: Publication[] = [
+  {
+    number: "10",
+    year: "2026",
+    kind: "Preprint",
+    title:
+      "On the sharp vanishing order of the Weyl tensor at a blow-up point for the Yamabe equation in all dimensions",
+    authors: [
+      { name: "YanYan Li", href: "https://sites.math.rutgers.edu/~yyli/" },
+      { name: "Anthony Matos" },
+    ],
+    links: [{ label: "arXiv", href: "https://arxiv.org/abs/2611.33646" }],
+  },
   {
     number: "09",
     year: "2026",
@@ -241,7 +253,7 @@ function Collaborators({ people }: { people: Person[] }) {
       {people.map((person, index) => (
         <span key={person.name}>
           {index > 0 && (index === people.length - 1 ? (people.length > 2 ? ", and " : " and ") : ", ")}
-          <OutboundLink href={person.href}>{person.name}</OutboundLink>
+          {person.href ? <OutboundLink href={person.href}>{person.name}</OutboundLink> : person.name}
         </span>
       ))}
     </>
